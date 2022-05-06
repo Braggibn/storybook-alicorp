@@ -2,15 +2,27 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'storybook-button',
-  template: ` <button
+  template: ` <h1> Boton Primario</h1>
+  <button
     type="button"
     (click)="onClick.emit($event)"
     [ngClass]="classes"
     [ngStyle]="{ 'background-color': backgroundColor }"
   >
     {{ label }}
+  </button>
+ <br>
+ <br>
+ <br>
+  <button
+    type="button"
+    (click)="onClick.emit($event)"
+    [ngClass]="classes"
+    [ngStyle]="{ 'background-color': backgroundColor }"
+  >
+    {{ label }} * Icon
   </button>`,
-  styleUrls: ['./button.css'],
+  styleUrls: ['./button.scss'],
 })
 export default class ButtonComponent {
   /**
@@ -46,8 +58,8 @@ export default class ButtonComponent {
   onClick = new EventEmitter<Event>();
 
   public get classes(): string[] {
-    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+    const mode = this.primary ? 'alicorp-button--primary' : 'alicorp-button--secondary';
 
-    return ['storybook-button', `storybook-button--${this.size}`, mode];
+    return ['alicorp-button', `alicorp-button--${this.size}`, mode];
   }
 }

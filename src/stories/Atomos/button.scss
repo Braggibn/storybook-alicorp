@@ -1,0 +1,56 @@
+@import "../../styles.sass";
+
+.alicorp-button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: .6s;
+
+  &--primary {
+    color: white;
+    background-color: $brand_primary_scale_00;
+
+    &:active {
+      box-shadow: none;
+    }
+
+    &:hover {
+      background-color: $brand_primary_scale_01;
+    }
+  }
+
+
+  &--secondary {
+    color: #333;
+    background-color: $brand_primary_scale_02;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+
+    &:active {
+      box-shadow: none;
+    }
+
+    &:hover {
+      background-color: $brand_primary_scale_03;
+    }
+  }
+
+  &--small {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+
+  &--medium {
+    font-size: 14px;
+    padding: 11px 20px;
+  }
+
+  &--large {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
